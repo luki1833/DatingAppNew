@@ -1,0 +1,5 @@
+{
+    "tslint.jsEnable": true,
+    "terminal.integrated.shell.windows": "E:\\Download\\PortableGit\\bin\\bash.exe",
+    "tslint.alwaysShowRuleFailuresAsWarnings": true
+}
