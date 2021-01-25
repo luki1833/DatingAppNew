@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DatingApp.API.Migrations
@@ -13,6 +14,11 @@ namespace DatingApp.API.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                        // .Annotation("SqlServer:ValueGenrationStrategy",
+                        // SqlServerValueGenerationStrategy.IdentityColumn)
+                        // .Annotation("MySql:ValueGenrationStrategy",
+                        // MySqlValueGenerationStrategy.IdentityColumn),
+
                     Username = table.Column<string>(nullable: true),
                     PasswordHash = table.Column<byte[]>(nullable: true),
                     PasswordSalt = table.Column<byte[]>(nullable: true),
@@ -37,6 +43,7 @@ namespace DatingApp.API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: true)
                 },

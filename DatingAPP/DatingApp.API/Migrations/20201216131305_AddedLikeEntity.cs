@@ -12,6 +12,7 @@ namespace DatingApp.API.Migrations
                 {
                     LikerId = table.Column<int>(nullable: false),
                     LikeeId = table.Column<int>(nullable: false)
+                    
                 },
                 constraints: table =>
                 {
